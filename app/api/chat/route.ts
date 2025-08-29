@@ -5,16 +5,16 @@ type Msg = { role: "user" | "assistant"; content: string };
 
 // User data for personalized responses
 const userData = {
-  name: "",
-  fullName: "",
-  role: "",
+  name: "บอส",
+  fullName: "ธณัฐชัย มูสิแก้ว",
+  role: "Student",
   skills: [
-    " ", " ", " ", " ", " ", 
+    "C programing", "ML", "Python", " ", " ", 
   ],
   education: [
     {
-      school: " ",
-      degree: " ",
+      school: "Assumption College Samuprakran",
+      degree: "ม.6",
       period: " ",
       description: " "
     },
@@ -27,8 +27,8 @@ const userData = {
     " "
   ],
   contact: {
-    email: "your.email@example.com",
-    phone: "+66 XX XXX XXXX",
+    email: "lnwking.play@gmail.com",
+    phone: "+66 83 213 1073",
     website: " ",
     github: " ",
     linkedin: " "

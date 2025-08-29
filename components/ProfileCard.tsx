@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-
+import Image from 'next/image';
 
 const ProfileCard: React.FC = () => {
 
     const socialLinks = [
         {
             name: 'Email',
-            href: 'mailto:alex.johnson@example.com',
+            href: 'mailto:lnwking.play@gmail.com',
             icon: (
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -18,6 +18,26 @@ const ProfileCard: React.FC = () => {
             color: 'text-red-400 hover:text-red-300'
         },
         //TODO: Add more social links here
+        {
+            name: 'Discord',
+            href: 'https://discord.gg/bossserking',
+            icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.942 4.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-8.72ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                </svg>
+            ),
+            color: 'text-indigo-400 hover:text-indigo-300'
+        },
+        {
+            name: 'Instagram',
+            href: 'https://instagram.com/nasejuki',
+            icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 0C7.284 0 6.944.012 5.877.06 2.246.227.227 2.242.06 5.877.012 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817C6.944 19.988 7.284 20 10 20s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.817-5.817C19.988 13.056 20 12.716 20 10s-.012-3.057-.06-4.123C19.833 2.245 17.818.227 14.183.06 13.057.012 12.716 0 10 0zm0 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clipRule="evenodd" />
+                </svg>
+            ),
+            color: 'text-pink-400 hover:text-pink-300'
+        },
     ];
 
     return (
@@ -40,19 +60,22 @@ const ProfileCard: React.FC = () => {
                         {/* Avatar */}
                         <div className="w-36 h-36 mx-auto mb-2 relative">
                             {/* //TODO: Replace with actual profile picture */}
-                            <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold shadow-xl">
-                                PIC
-                            </div>                            
+                            <Image
+                                src="/baby.jpg"
+                                alt="Profile"
+                                fill
+                                className="rounded-full object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full animate-ping opacity-20"></div>
                         </div>
 
                         {/* Name and Title */}
                         {/* //TODO: Replace with actual name and title */}
                         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
-                            Name Surname
+                            Tanatchai Musikawe
                         </h1>
                         <div className="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-200 text-sm sm:text-base border border-blue-400/30  mb-1">
-                            Your Role
+                            simple bna
                         </div>
 
                         {/* Contact Information */}
@@ -66,7 +89,7 @@ const ProfileCard: React.FC = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-white font-medium text-sm sm:text-base">your.email@example.com</p>
+                                    <p className="text-white font-medium text-sm sm:text-base">lnwking.play@gmial.com</p>
                                 </div>
                             </div>
 
@@ -77,7 +100,7 @@ const ProfileCard: React.FC = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-white font-medium text-sm sm:text-base">+66 (098) 123-4567</p>
+                                    <p className="text-white font-medium text-sm sm:text-base">+66 (083) 213-1073</p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +110,7 @@ const ProfileCard: React.FC = () => {
                     {/* //TODO: Replace with actual bio */}
                     <div className="max-w-xl mb-2">
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                            Your brief bio goes here. Share a bit about yourself, your interests, and what you do. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, voluptatibus dignissimos nobis libero similique reiciendis animi, nisi nihil soluta praesentium,.
+                            I'm super human in the world and i will get rich in 30 days.
                         </p>
                     </div>
 
